@@ -28,11 +28,11 @@ function StoryList({ dataList=[], filterName='', userEmail='', filterEmail=false
                                     {
                                         story.userEmail === userEmail ?
                                         <div className="home-story-buttons">
-                                            <button onClick={() => handleOpenStory(story.id)}>Open Story</button>
-                                            <button onClick={() => handleEditStory(story.id)}>Edit Story</button>
+                                            <button onClick={() => handleOpenStory(story.id)}>Open</button>
+                                            <button onClick={() => handleEditStory(story.id)}>Edit/Delete</button>
                                         </div> :
                                         <div className="home-story-buttons">
-                                            <button onClick={() => handleOpenStory(story.id)}>Open Story</button>
+                                            <button onClick={() => handleOpenStory(story.id)}>Open</button>
                                         </div>
                                     }
                                 </div>
@@ -58,11 +58,11 @@ function StoryList({ dataList=[], filterName='', userEmail='', filterEmail=false
                                     {
                                         story.userEmail === userEmail ?
                                         <div className="home-story-buttons">
-                                            <button onClick={() => handleOpenStory(story.id)}>Open Story</button>
-                                            <button onClick={() => handleEditStory(story.id)}>Edit Story</button>
+                                            <button onClick={() => handleOpenStory(story.id)}>Open</button>
+                                            <button onClick={() => handleEditStory(story.id)}>Edit/Delete</button>
                                         </div> :
                                         <div className="home-story-buttons">
-                                            <button onClick={() => handleOpenStory(story.id)}>Open Story</button>
+                                            <button onClick={() => handleOpenStory(story.id)}>Open</button>
                                         </div>
                                     }
                                 </div>

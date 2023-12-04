@@ -23,8 +23,8 @@
 .individual-story-username {
     display: flex;
     justify-content: center;
-    font-size: 20px;
     font-weight: 550;
+    font-size: 10px;
 }
 .individual-story-tag {
     border: 1px solid #dee2e5;

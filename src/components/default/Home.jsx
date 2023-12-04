@@ -13,21 +13,21 @@ const Default = ({ name='', userEmail='' }) => {
     const [filterName, setFilterName] = useState('')
     
     function get(){
-      console.log('get fun called 1')
+      //console.log('get fun called 1')
         
         const query = ref(db,"post");
-        console.log('get fun called 2')
+        //console.log('get fun called 2')
         
         return onValue(query, (snapshot) => {
-          console.log('get fun called 3')
+          //console.log('get fun called 3')
           const data = snapshot.val();
-          console.log('get fun called 4')
+          //console.log('get fun called 4')
           
           
           if (snapshot.exists()) {
-            console.log('get fun called 5')
+            //console.log('get fun called 5')
            setDataList(data)
-           console.log(data)
+           //console.log(data)
           }
           else
           console.log("no data");
