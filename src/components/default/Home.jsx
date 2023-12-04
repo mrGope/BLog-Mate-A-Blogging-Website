@@ -1,10 +1,38 @@
-import React from "react";
+import React, {useEffect} from "react";
 import './Home.css'
 import { jsonData } from "../assets/utils/utils";
 
+import { db } from "../../firebase";
+import { onValue, ref} from "firebase/database";
+
+
+
+
 const Default = ({ name='', userEmail='' }) => {
+    
+    function get(){
+        
+        const query = ref(db,"post");
+        
+        return onValue(query, (snapshot) => {
+          const data = snapshot.val();
+    
+          if (snapshot.exists()) {
+           console.log(data);
+          }
+          else
+          console.log("no data");
+        });
+        
+     }                            
+
+    useEffect(() => {
+        get()
+    }, [])
+
   return(
-    <div className="home">
+       <div className="home">
+        
         <div className="container">
             <h2>Welcome {name}</h2>
         </div>

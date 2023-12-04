@@ -1,9 +1,12 @@
 import { initializeApp } from "firebase/app";
 import { getAuth } from "firebase/auth";
+import { getDatabase } from "firebase/database";
+
 
 const firebaseConfig = {
   apiKey: "AIzaSyAfUDfgUSOY8il9C2AsAjzUKgW5UKOyNCI",
   authDomain: "blog-mate.firebaseapp.com",
+  databaseURL: "https://blog-mate-default-rtdb.asia-southeast1.firebasedatabase.app",
   projectId: "blog-mate",
   storageBucket: "blog-mate.appspot.com",
   messagingSenderId: "531321647592",
@@ -11,7 +14,7 @@ const firebaseConfig = {
 };
 
 const app = initializeApp(firebaseConfig);
-
+const database=getDatabase(app);
 const auth = getAuth();
-
-export { app, auth };
+export { app,auth,database};
+export const db = getDatabase(app);
