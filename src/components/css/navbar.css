@@ -1,9 +1,12 @@
 
 *{
     font-family: Geneva, Verdana, sans-serif;
+    
+
+
 }
 .navigation {
-    
+  position: fixed;
   height: 60px;
   width: 100%;
   display: flex;
@@ -15,7 +18,7 @@
   box-shadow: 0 2px 2px 2px rgba(9, 9, 9, 0.23);
 }
 .brand-icon{
-    margin-left: 10px;
+    margin-left: 30px;
 }
 .brand-name {
     text-decoration: none;

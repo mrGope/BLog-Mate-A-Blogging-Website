@@ -38,7 +38,7 @@ function Login() {
   return (
     <div className={styles.container}>
       <div className={styles.innerBox}>
-        <h1 className={styles.heading}>Login</h1>
+        <h1 className={styles.heading}>BlogMate Login</h1>
 
         <InputControl
           label="Email"
