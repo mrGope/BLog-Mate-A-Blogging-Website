@@ -31,9 +31,9 @@ export default function Navbar(props) {
           {
             display_status!=='none' &&
             <ul className="after-login" >
-            <li>
+            {/* <li>
               <Link to="/home">{display_name}</Link>
-            </li>
+            </li> */}
             <li>
               <Link to='/home'>Welcome</Link>
             </li>
