@@ -4,6 +4,7 @@ import { Link } from "react-router-dom";
 export default function Navbar(props) {
     const display_status = props.display;
     const display_status_rev=display_status=="none"?"flex":"none";
+    const display_name = props.name
     return (
       <nav className="navigation">
         <img className="brand-icon" style={{width: 50, height: 50}} src={navbar_icon} alt="Logo" />
@@ -13,33 +14,40 @@ export default function Navbar(props) {
         </a>
         <div
           className="navigation-menu">
-          <ul className="Before-login" style={{display:display_status_rev}}>
+          {
+            display_status==='none' &&
+            <ul className="Before-login" >
             <li>
-             
               <Link to="/login">Login</Link>
-
             </li>
             <li>
             <Link to="/signup">Signup</Link>
-
             </li>
             <li>
                  <Link to="/login">About us</Link>
-
             </li>
           </ul>
-          <ul className="after-login" style={{display:display_status}}>
+          }
+          {
+            display_status!=='none' &&
+            <ul className="after-login" >
             <li>
-             
-              <Link to="/login">Welcome</Link>
-
+              <Link to="/home">{display_name}</Link>
             </li>
-           
             <li>
-                 <Link to="/login">About us</Link>
-
+              <Link to='/home'>Welcome</Link>
+            </li>
+            <li>
+                 <Link to="/my-stories">My Stories</Link>
+            </li>
+            <li>
+                 <Link to="/about">About us</Link>
+            </li>
+            <li>
+                 <Link to="/logout">Logout</Link>
             </li>
           </ul>
+          }
         </div>
       </nav>
     );
