@@ -37,6 +37,7 @@ useEffect(() => {
             return (<div className='individual-story'>
               <div className='individual-story-title'>{story.storyTitle}</div>
               <div className='individual-story-username'>by {story.userName}</div>
+              <span className='individual-story-tag'>{story.tag ? story.tag : 'sometag'}</span>
               <div className='individual-story-image'>
                 <img src={story.storyImageLink} alt='story-image'/>
               </div>

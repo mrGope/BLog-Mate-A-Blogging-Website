@@ -38,6 +38,17 @@
     border-radius: 6px;
     outline: none;
 }
+.new-story-delete {
+    padding: 12px;
+    border: 1px solid black;
+    color: #fff;
+    font-size: 14px;
+    font-weight: 500;
+    cursor: pointer;
+    background-color: black;
+    border-radius: 6px;
+    outline: none;
+}
 .tags {
     display: flex;
     gap: 8px;

@@ -10,16 +10,24 @@ import StoryList from "../story-list/story-list";
 
 const Default = ({ name='', userEmail='' }) => {
     const [dataList, setDataList] = useState([])
+    const [filterName, setFilterName] = useState('')
     
     function get(){
+      console.log('get fun called 1')
         
         const query = ref(db,"post");
+        console.log('get fun called 2')
         
         return onValue(query, (snapshot) => {
+          console.log('get fun called 3')
           const data = snapshot.val();
-    
+          console.log('get fun called 4')
+          
+          
           if (snapshot.exists()) {
+            console.log('get fun called 5')
            setDataList(data)
+           console.log(data)
           }
           else
           console.log("no data");
@@ -35,8 +43,10 @@ const Default = ({ name='', userEmail='' }) => {
        <div className="home">
         
         <div className="home-header">-Top Stories-</div>
-
-        <StoryList dataList={dataList} filterName="" userEmail={userEmail}/>
+        <div className="filter-search">
+          <input value={filterName} onChange={e => setFilterName(e.target.value)} placeholder='Search'/>
+        </div>
+        <StoryList dataList={dataList} filterName={filterName} userEmail={userEmail}/>
    </div> 
   )
 }

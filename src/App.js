@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import { BrowserRouter as Router, Routes, Route, Link, useLocation } from "react-router-dom";
+import { BrowserRouter as Router, Routes, Route, Link, Navigate } from "react-router-dom";
 
 import Home from "./components/default/Home";
 import Login from "./components/login/Login";
@@ -12,6 +12,8 @@ import Logout from "./components/logout/Logout";
 import MyStories from "./components/my-stories/MyStories";
 import Story from "./components/story/story";
 import NewStory from "./components/new-story/new-story";
+import EditStory from "./components/edit-story/edit-story";
+import About from "./components/about/about";
 
 function App() {
   const [isLogOut, setIsLogOut] = useState(false)
@@ -35,6 +37,7 @@ function App() {
       <Router>
       <Navbar display={userName === -1 ? "none" : "flex"} name={userName} setIsLogOut={(value) => setIsLogOut(value)}/>
         <Routes >
+        <Route path='/' element={ <Navigate to="/login"/> }/>
           <Route path="/home" element={<Home name={userName} userEmail={userEmail}/>} />
           <Route path="/login" element={<Login />} />
           <Route path="/signup" element={<Signup />} />
@@ -42,14 +45,19 @@ function App() {
           <Route path="/my-stories" element={<MyStories name={userName} userEmail={userEmail}/>}/>
           <Route path="/story/:id" element={<Story name={userName} userEmail={userEmail}/>}/>
           <Route path="/new-story" element={<NewStory name={userName} userEmail={userEmail}/>}/>
+          <Route path="/edit-story/:id" element={<EditStory name={userName} userEmail={userEmail}/>}/>
+          <Route path="/about" element={<About />}/>
         </Routes>
         {
             isLogOut===true &&
             <Logout setIsLogOut={(value) => setIsLogOut(value)}/>
         }
-          <div className="fixed-new-blog" title="Share New Story">
+          {
+            userName!==-1 &&
+            <div className="fixed-new-blog" title="Share New Story">
             <Link to="/new-story">New</Link>
           </div>
+          }
       </Router>
       
     </div>

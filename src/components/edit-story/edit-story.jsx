@@ -1,12 +1,21 @@
-import React, { useState } from 'react'
-import './new-story.css'
-import { db } from "../../firebase";
+import React, { useState, useEffect } from 'react'
+import './edit-story.css'
+import { db } from '../../firebase';
 import { onValue, ref} from "firebase/database";
-function NewStory({ name, useemail}) {
+import { useParams } from 'react-router-dom';
+
+function EditStory({ name, useemail}) {
+    const [dataList, setDataList] = useState([])
+    const params = useParams()
     function handleSubmit(e) {
         e.preventDefault()
-
+        //on clicking publish
     }
+    function handleDelete(e) {
+        e.preventDefault()
+        //on clicking delete
+    }
+
     const [storyTitle, setStoryTitle] = useState('')
     const [storyDescription, setStoryDescription] = useState('')
     const [tag, setTag] = useState('')
@@ -24,9 +33,36 @@ function NewStory({ name, useemail}) {
     function handleFileChange(e) {
         setStoryTitle(e.target.value)
     }
+  
+    function get(){
+        
+    const query = ref(db,"post");
+    
+    return onValue(query, (snapshot) => {
+      const data = snapshot.val();
+
+      if (snapshot.exists()) {
+       setDataList(data)
+       for(let story of data) {
+        //setting the edit object data inside the relevant variables
+        if(story.id === params.id) {
+            setStoryDescription(story.storyDescription)
+            setStoryTitle(story.storyTitle)
+            setTag(story.tag ? story.tag : '')
+        }
+       }
+      }
+      else
+      console.log("no data");
+    });
+    
+ }    
+    useEffect(() => {
+        get()
+    }, [])
   return (
-    <div className='new-story'>
-        <span className="new-story-header">- Publish new story -</span>
+    <div>
+        <span className="new-story-header">- Edit story -</span>
         <form className='container new-story-form'>
                 <label>Story Title</label>
                 <input type='text' value={storyTitle} className='input-field' onChange={e => handleTitleChange(e)}/>
@@ -41,10 +77,11 @@ function NewStory({ name, useemail}) {
                     <span className={tag==='Technology' ? 'tag active-tag' : 'tag'} onClick={() => setTag('Technology')}>Technology</span>
                     <span className={tag==='Sport' ? 'tag active-tag' : 'tag'} onClick={() => setTag('Sport')}>Sport</span>
                 </div>
-                <button onClick={(e) => handleSubmit(e)} className='new-story-publish'>Publish</button>
+                <button onClick={(e) => handleSubmit(e)} className='new-story-publish'>Republish</button>
+                <button onClick={(e) => handleDelete(e)} className='new-story-delete'>Delete</button>
             </form>
     </div>
   )
 }
 
-export default NewStory
+export default EditStory

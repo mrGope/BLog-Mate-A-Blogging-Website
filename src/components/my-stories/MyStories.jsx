@@ -3,9 +3,11 @@ import { jsonData } from '../assets/utils/utils'
 import { db } from '../../firebase';
 import { onValue, ref} from "firebase/database";
 import StoryList from '../story-list/story-list'
+import './MyStories.css'
 
 function MyStories({ name='', userEmail='' }) {
   const [dataList, setDataList] = useState([])
+  const [filterName, setFilterName] = useState('')
   
   function get(){
         
@@ -27,7 +29,13 @@ useEffect(() => {
     get()
 }, [])
   return (
-    <StoryList dataList={dataList} userEmail={userEmail} filterEmail={true}/>
+    <div className='my-stories'>
+      <div className="my-stories-header">-My Stories-</div>
+      <div className="filter-search">
+          <input value={filterName} onChange={e => setFilterName(e.target.value)} placeholder='Search'/>
+        </div>
+        <StoryList dataList={dataList} filterName={filterName} userEmail={userEmail} filterEmail={true}/>
+    </div>
   )
 }
 

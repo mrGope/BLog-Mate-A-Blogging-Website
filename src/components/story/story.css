@@ -26,6 +26,17 @@
     font-size: 20px;
     font-weight: 550;
 }
+.individual-story-tag {
+    border: 1px solid #dee2e5;
+    width: fit-content;
+    border-radius: 5px;
+    padding: 6px 15px;
+    transition: all 300ms ease-in-out;
+    margin-bottom: 20px;
+    cursor: pointer;
+    color: #fff !important;
+    background-color: #5659C9 !important;
+}
 .individual-story-image {
     width: 100%;
 }

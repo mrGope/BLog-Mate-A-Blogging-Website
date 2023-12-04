@@ -8,10 +8,14 @@ function StoryList({ dataList=[], filterName='', userEmail='', filterEmail=false
         const url = '/story/' + storyId;
         navigate(url)
     }
+    function handleEditStory(storyId) {
+        const url = '/edit-story/' + storyId;
+        navigate(url)
+    }
   return (
     <div className="container">
             {
-                dataList.map((story, storyIndex) => {
+                dataList?.map((story, storyIndex) => {
                     if(storyIndex%2===0 && (filterEmail===false && story.storyTitle.includes(filterName)) || (filterEmail===true && story.userEmail.includes(userEmail) && story.storyTitle.includes(filterName))) {
                         return (    
                             <div className="container home-story">
@@ -19,13 +23,13 @@ function StoryList({ dataList=[], filterName='', userEmail='', filterEmail=false
                                     <span className="home-story-home-title">{story.storyTitle}</span>
                                     <span className="home-story-home-by-username">by {story.userName}</span>
                                     <br />
+                                    <span className='home-story-tag'>Tag : {story.tag ? story.tag : 'sometag'}</span>
                                     <span className="home-story-home-description">{story.storyDescription}</span>
                                     {
                                         story.userEmail === userEmail ?
                                         <div className="home-story-buttons">
                                             <button onClick={() => handleOpenStory(story.id)}>Open Story</button>
-                                            <button>Edit Story</button>
-                                            <button>Delete Story</button>
+                                            <button onClick={() => handleEditStory(story.id)}>Edit Story</button>
                                         </div> :
                                         <div className="home-story-buttons">
                                             <button onClick={() => handleOpenStory(story.id)}>Open Story</button>
@@ -49,13 +53,13 @@ function StoryList({ dataList=[], filterName='', userEmail='', filterEmail=false
                                     <span className="home-story-home-title">{story.storyTitle}</span>
                                     <span className="home-story-home-by-username">by {story.userName}</span>
                                     <br />
+                                    <span className='home-story-tag'>Tag : {story.tag ? story.tag : 'sometag'}</span>
                                     <span className="home-story-home-description">{story.storyDescription}</span>
                                     {
                                         story.userEmail === userEmail ?
                                         <div className="home-story-buttons">
                                             <button onClick={() => handleOpenStory(story.id)}>Open Story</button>
-                                            <button>Edit Story</button>
-                                            <button>Delete Story</button>
+                                            <button onClick={() => handleEditStory(story.id)}>Edit Story</button>
                                         </div> :
                                         <div className="home-story-buttons">
                                             <button onClick={() => handleOpenStory(story.id)}>Open Story</button>

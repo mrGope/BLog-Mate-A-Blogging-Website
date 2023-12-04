@@ -16,7 +16,7 @@ function Login() {
   const [errorMsg, setErrorMsg] = useState("");
   const [submitButtonDisabled, setSubmitButtonDisabled] = useState(false);
 
-  const handleSubmission = () => {
+  function handleSubmission () {
     if (!values.email || !values.pass) {
       setErrorMsg("Fill all fields");
       return;

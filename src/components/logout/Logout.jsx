@@ -6,11 +6,11 @@ import './Logout.css'
 
 function Logout({ setIsLogOut }) {
     const navigate = useNavigate();
-    const handleLogOut = () => {
+    function handleLogOut() {
         signOut(auth)
         navigate('/')
     }
-    const handleGoBack = () => {
+    function handleGoBack() {
         window.history.back()
     }
   return (
