@@ -1,0 +1,76 @@
+.home-story {
+    display: flex !important;
+    flex-direction: row !important;
+    gap: 4px !important;
+    text-align: center;
+    box-sizing: border-box;
+    word-wrap: break-word;
+    padding-top: 20px !important;
+    padding-bottom: 20px !important;
+}
+.home-story-description {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    flex: 0.5;
+}
+.home-story-home-title {
+    font-weight: 600;
+    font-size: 24px;
+}
+.home-story-home-by-username {
+    font-weight: 600;
+    font-size: 20px;
+}
+.home-story-home-description {
+    font-weight: 500;
+    font-size: 14px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    max-width: 73%;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    margin: 0 auto;
+}
+.home-story-image {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex: 0.5;
+}
+.home-story-image > img {
+    width: 100%;
+}
+.home-story-buttons {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    gap: 12px;
+}
+.home-story-buttons > button {
+    padding: 12px;
+    border: 1px solid black;
+    color: black;
+    font-size: 14px;
+    font-weight: 500;
+    cursor: pointer;
+    background-color: #fff;
+    border-radius: 6px;
+    outline: none;
+}
+@media(max-width: 800px) {
+    .home-story {
+        display: flex;
+        flex-direction: column;
+        gap: 12px;
+    }
+    .home-story-description {
+        flex: 1;
+    }
+    .home-story-image {
+        flex: 1;
+    }
+}

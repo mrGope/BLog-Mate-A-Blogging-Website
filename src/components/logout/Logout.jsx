@@ -4,7 +4,7 @@ import { signOut } from 'firebase/auth';
 import { useNavigate } from "react-router-dom";
 import './Logout.css'
 
-function Logout() {
+function Logout({ setIsLogOut }) {
     const navigate = useNavigate();
     const handleLogOut = () => {
         signOut(auth)
@@ -14,7 +14,8 @@ function Logout() {
         window.history.back()
     }
   return (
-    <div className='logout-container'>
+    <div className='dialog-backdrop'>
+        <div className='logout-container'>
         <div className='logout'>
             <span>Are you sure?</span>
             <div className='logout-buttons'> 
@@ -22,6 +23,7 @@ function Logout() {
                 <button onClick={() => handleGoBack()}>No</button>
             </div>
         </div>
+    </div>
     </div>
   );
 }

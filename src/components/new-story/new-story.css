@@ -1,0 +1,40 @@
+.new-story {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    padding: 15px;
+    box-sizing: border-box;
+}
+.new-story-header {
+    color: rgb(255 138 12);
+    text-align: center;
+    font-weight: 540;
+    font-size: 12px;
+}
+.new-story-form {
+    
+}
+.input-field {
+    outline: none;
+    border: none;
+    padding: 15px;
+    border-bottom: 2px solid #8ab4f8;
+    font-size: 14px;
+}
+.new-story-form > textarea{
+    border: 2px solid #8ab4f8;
+    outline: none;
+    border-radius: 6px;
+    font-size: 14px;
+}
+.new-story-publish {
+    padding: 12px;
+    border: 1px solid black;
+    color: black;
+    font-size: 14px;
+    font-weight: 500;
+    cursor: pointer;
+    background-color: #fff;
+    border-radius: 6px;
+    outline: none;
+}
