@@ -4,6 +4,7 @@ import './Home.css'
 import { db } from "../../firebase";
 import { onValue, ref} from "firebase/database";
 import StoryList from "../story-list/story-list";
+import search from "../assets/search.png"
 
 
 
@@ -44,8 +45,10 @@ const Default = ({ name='', userEmail='' }) => {
         
         <div className="home-header">-Top Stories-</div>
         <div className="filter-search">
+        <img className="brand-icon" style={{width: 35, height: 35,padding:5}} src={search} alt="Find" />
           <input value={filterName} onChange={e => setFilterName(e.target.value)} placeholder='Search'/>
         </div>
+       
         <StoryList dataList={dataList} filterName={filterName} userEmail={userEmail}/>
    </div> 
   )

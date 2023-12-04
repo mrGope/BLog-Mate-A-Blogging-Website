@@ -11,3 +11,8 @@
     font-weight: 540;
     font-size: 12px;
 }
+.home .filter-search{
+    display: flex;
+    flex-direction: row;
+    width: 300px;
+}
