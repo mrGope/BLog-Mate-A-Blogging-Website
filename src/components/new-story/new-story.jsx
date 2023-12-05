@@ -6,7 +6,18 @@ import { onValue, ref,set} from "firebase/database";
 function NewStory({ name, userEmail}) {
 
     function handleSubmit(e)
-     {
+     { 
+        if( postCount==""||name==""||userEmail==""||
+            storyTitle==""||
+            tag==""||
+            storyDescription==""
+           )
+        {
+            alert("All Field are Mandatory")
+         return
+        }
+        else
+        {
         e.preventDefault()
         const query = ref(db,"postdetails");
         var postCount=0;
@@ -37,7 +48,11 @@ function NewStory({ name, userEmail}) {
             postcount:postCount
            
           });
-        
+          setStorylength("");
+          setStoryTitle("");
+          setStoryDescription("");
+          setTag("");
+          setStoryImage("");}
 
     }
     const [storyLength, setStorylength] = useState(0)
