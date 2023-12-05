@@ -1,70 +1,98 @@
-# Getting Started with Create React App
+ BLOGMATE -**
+**A REACTJS WEB APP POWERED BY GOOGLE FIREBASE.**
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+_ **Submitted by** _
+**ADITYA KUMAR GOPE**
+ **Roll no: 2247203 CHRIST UNIVERSITY MCA
+ email:**[**aditya.gope@mca.christuniversity.in**](mailto:aditya.gope@mca.christuniversity.in)**Phone:9903602942**
 
-## Available Scripts
+**GitHub repository link:** [**https://github.com/mrGope/BLog-Mate-A-Blogging-Website**](https://github.com/mrGope/BLog-Mate-A-Blogging-Website)
+ **Hosted Website Link:** [**https://blog-mate.web.app**](https://blog-mate.web.app/)
 
-In the project directory, you can run:
+**TECHNOLOGIES USED:**
 
-### `npm start`
+- **REACTJS**
+- **HTML**
+- **CSS**
+- **JavaScript**
+- **Google Firebase Auth**
+- **Google Firebase Realtime Database.**
+- **Google Firebase Hosting Services**
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+**Instruction to Run of Local System:**
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+Step1: Clone Git Repo
 
-### `npm test`
+Step2: Open using VS-code and open Terminal in the folder
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+Step3: run "npm install"
 
-### `npm run build`
+Step4: once done run "npm run start" or "npm start"
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+Step 5: Website will be hosted to localhost::3000//
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+**About the project:**
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+**BlogMate** is a Simple yetpowerful blogging platform open to everyone. Anyone who has already logged in can access the contents of the webpage, users can register is they haven't done it yet.
+ Once registered users can log in to their account and access all posts made by all the users on the platform , but only the users who has created a post can edit his/her post and delete it , for every other post he can only view it.
+ Users can make new posts with title, description and even an Image which they have to upload in link format.
+ Even if the user made a mistake or wants to edit this story or all together delete it that is allowed.
+ No need to search for content manual a real-time search module is present so the user can always filter content. Lastly it features a logout module.
 
-### `npm run eject`
+**Security Measures**
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+- Authorization using Google Firebase.
+- Login Module for extra layer of security.
+- 1 to 1 email to user ratio prevents spam accounts.
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+**Features**
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+- **Login using email and password**
+- **Register using credentials**
+- **Post new story**
+- **View everyone's story**
+- **Edit own story previously posted**
+- **Delete only own story previously posted**
+- **Filter posts based on search index**
+- **Realtime database updates the complete user app in Realtime**
+- **Tags for better Reach**
+- **Image for visual appeal**
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+# **SCREENSHOTS AND SAMPLES OF ALL MODULES**
 
-## Learn More
+ **LANDING PAGE AND LOGIN MODULE:**
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+ ![](RackMultipart20231205-1-pqf6tk_html_75554031b7848e7c.png)
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+**NEW users can always Signup and Login**
 
-### Code Splitting
+![](RackMultipart20231205-1-pqf6tk_html_dcad0544b06ad934.png)
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+**After Login in as** [**adi@gmail.com**](mailto:adi@gmail.com)
+ ![](RackMultipart20231205-1-pqf6tk_html_da7f19e79f953a9d.png)
 
-### Analyzing the Bundle Size
+**Home page**
+ ![](RackMultipart20231205-1-pqf6tk_html_1788c4de05ac98c1.png)
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+**Open and view post**
+ ![](RackMultipart20231205-1-pqf6tk_html_7617e624adb50d7b.png)
 
-### Making a Progressive Web App
+**Only Users who created have the permission to Edit/Delete the post**
+ ![](RackMultipart20231205-1-pqf6tk_html_ffea764f352420d3.png)
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+**POSTING OF NEW STORIES**
 
-### Advanced Configuration
+![](RackMultipart20231205-1-pqf6tk_html_6ec82a9c39816e26.png)
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+**REALTIME Publication of Story**
 
-### Deployment
+![](RackMultipart20231205-1-pqf6tk_html_7cc877ca73fc662.png)
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+**Filter posts using Search option**
 
-### `npm run build` fails to minify
+![](RackMultipart20231205-1-pqf6tk_html_590ca4f81f8ff44d.png)
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+**Logout feature**
+ ![](RackMultipart20231205-1-pqf6tk_html_d2817974157e730d.png)
+
+ **THE END**
