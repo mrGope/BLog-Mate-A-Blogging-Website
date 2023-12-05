@@ -16,10 +16,12 @@ function EditStory({ name, userEmail}) {
             userEmail:userEmail ,
             storyTitle: storyTitle,
             tag:Tag,
+           
             storyDescription: storyDescription,
-           // storyImageLink: storyImage
+           storyImageLink: storyImage
           });
-          console.log("edited")
+          alert("Successfully Edited");
+          window.history.back();  
     }
     function handleDelete(e) {
         e.preventDefault()
@@ -27,6 +29,7 @@ function EditStory({ name, userEmail}) {
             
            // storyImageLink: storyImage
           }).then(() => {
+            alert("Successfully Story Deleted");
             console.log("Deleted");
             window.history.back();  
           }).catch((error) => {
@@ -38,6 +41,7 @@ function EditStory({ name, userEmail}) {
     const [storyTitle, setStoryTitle] = useState('')
     const [storyDescription, setStoryDescription] = useState('')
     const [Tag, setTag] = useState('')
+    const [storyImage, setStoryImage] = useState('')
     function handleTitleChange(e) {
         setStoryTitle(e.target.value)
     }
@@ -66,10 +70,11 @@ function EditStory({ name, userEmail}) {
         if(key=== params.id) {
            // console.log(data[key])
             setID(data[key].id)
+            setStoryImage(data[key].storyImageLink)
             setStoryDescription(data[key].storyDescription)
             setStoryTitle(data[key].storyTitle)
             setTag(data[key].tag !=null? data[key].tag : '')
-            console.log(ID+" "+storyTitle+" "+storyDescription)
+            console.log(ID+" "+storyTitle+" "+storyDescription+" "+storyImage)
            
         }
       });

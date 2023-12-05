@@ -40,7 +40,8 @@
 
 .individual-story-image>img {
     width: 100% !important;
-    height: 60%;
+    height: 500px !important;
+    object-fit: cover;
 }
 .individual-story-description {
     font-size: 14px;

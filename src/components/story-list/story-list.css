@@ -1,3 +1,6 @@
+*{
+    font-family: serif;
+}
 .home-story {
     display: flex !important;
     flex-direction: row !important;
@@ -75,9 +78,9 @@
 }
 @media(max-width: 800px) {
     .home-story {
-        display: flex;
-        flex-direction: column;
-        gap: 12px;
+        display: flex !important;
+        flex-direction: column !important;
+        gap: 12px !important;
     }
     .home-story-description {
         flex: 1;

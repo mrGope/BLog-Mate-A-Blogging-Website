@@ -29,11 +29,11 @@ export default function Navbar({ display, name, setIsLogOut}) {
           {
             display_status!=='none' &&
             <ul className="after-login" >
-            {/* <li>
-              <Link to="/home">{display_name}</Link>
-            </li> */}
+            {<li >
+              <Link style={{color:"#5659C9"}} to="/home">Logged in as {name}</Link>
+            </li> }
             <li>
-              <Link to='/home'>Welcome</Link>
+              <Link to='/home'>Home</Link>
             </li>
             <li>
                  <Link to="/my-stories">My Stories</Link>

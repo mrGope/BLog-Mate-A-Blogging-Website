@@ -6,6 +6,7 @@ import './Logout.css'
 
 function Logout({ setIsLogOut }) {
     const navigate = useNavigate();
+    
     function handleLogOut() {
         signOut(auth)
         navigate('/')

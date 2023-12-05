@@ -23,6 +23,7 @@
     pointer-events: all;
     display: flex;
     padding: 15px;
+    align-items: center;
     flex-direction: column;
     gap: 12px;
     min-width: 220px;
@@ -31,7 +32,7 @@
 .logout-buttons {
     display: flex;
     flex-direction: row;
-    justify-content: flex-end;
+    justify-content: space-around;
     gap: 12px;
 }
 .logout-buttons > button {

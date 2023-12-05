@@ -26,10 +26,20 @@
     align-items: center;
     cursor: pointer;
     z-index: 1;
-    transition: transform .3s; 
+    transition: transform .6s; 
 
 }
-.fixed-new-blog :hover
+.hidden-new-story {
+    display: none;
+}
+.fixed-new-blog:hover .hidden-new-story {
+    display: flex;
+    font-size: 20px;
+}
+.fixed-new-blog:hover .visible-new-story {
+    display: none;
+}
+.fixed-new-blog :hover 
 {
     
     transform: scale(1.5);

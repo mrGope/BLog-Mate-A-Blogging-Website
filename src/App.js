@@ -39,7 +39,7 @@ function App() {
         <Routes >
         <Route path='/' element={ <Navigate to="/login"/> }/>
           <Route path="/home" element={<Home name={userName} userEmail={userEmail}/>} />
-          <Route path="/login" element={<Login />} />
+          <Route path="/login" element={<Login name={userName} userEmail={userEmail}/>} />
           <Route path="/signup" element={<Signup />} />
           <Route path="/logout" element={<Logout />} />
           <Route path="/my-stories" element={<MyStories name={userName} userEmail={userEmail}/>}/>
@@ -55,7 +55,8 @@ function App() {
           {
             userName!==-1 &&
             <div className="fixed-new-blog" title="Share New Story">
-            <Link to="/new-story">New</Link>
+            <Link className="visible-new-story" to="/new-story">New</Link>
+            <Link className="hidden-new-story" to="/new-story">+</Link>
           </div>
           }
       </Router>

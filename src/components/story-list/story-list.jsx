@@ -16,7 +16,7 @@ function StoryList({ dataList=[], filterName='', userEmail='', filterEmail=false
     <div className="container">
             {
                 dataList?.map((story, storyIndex) => {
-                    if(storyIndex%2===0 && (filterEmail===false && story.storyTitle.toLowerCase().includes(filterName.toLowerCase()) ||story.storyDescription.toLowerCase().includes(filterName.toLowerCase()) ) || (filterEmail===true && story.userEmail.toLowerCase().includes(userEmail.toLowerCase()) && story.storyTitle.includes(filterName))) {
+                    if(storyIndex%2===0 && (filterEmail===false && (story.storyTitle.toLowerCase().includes(filterName.toLowerCase()) ||story.storyDescription.toLowerCase().includes(filterName.toLowerCase())) ) || (filterEmail===true && story.userEmail.toLowerCase().includes(userEmail.toLowerCase()) && story.storyTitle.includes(filterName))) {
                         return (    
                             <div className="container home-story">
                                 <div className="home-story-description">
@@ -43,7 +43,7 @@ function StoryList({ dataList=[], filterName='', userEmail='', filterEmail=false
                             </div>
                         )
                     }
-                    if(storyIndex%2!==0 && (filterEmail===false && story.storyTitle.toLowerCase().includes(filterName.toLowerCase()) ||story.storyDescription.toLowerCase().includes(filterName.toLowerCase()) ) || (filterEmail===true && story.userEmail.toLowerCase().includes(userEmail.toLowerCase()) && story.storyTitle.includes(filterName))) {
+                    if(storyIndex%2!==0 && (filterEmail===false && (story.storyTitle.toLowerCase().includes(filterName.toLowerCase()) ||story.storyDescription.toLowerCase().includes(filterName.toLowerCase()) )) || (filterEmail===true && story.userEmail.toLowerCase().includes(userEmail.toLowerCase()) && story.storyTitle.includes(filterName))) {
                         return (    
                             <div className="container home-story">
                                 <div className="home-story-image">

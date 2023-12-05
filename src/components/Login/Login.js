@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import { signInWithEmailAndPassword } from "firebase/auth";
 
@@ -7,7 +7,7 @@ import { auth } from "../../firebase";
 
 import styles from "./Login.module.css";
 
-function Login() {
+function Login({name, userEmail}) {
   const navigate = useNavigate();
   const [values, setValues] = useState({
     email: "",
