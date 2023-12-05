@@ -33,7 +33,7 @@ export default function Navbar({ display, name, setIsLogOut}) {
               <Link to="/home">{display_name}</Link>
             </li> */}
             <li>
-              <Link to='/home'>Welcome,{name}</Link>
+              <Link to='/home'>Welcome</Link>
             </li>
             <li>
                  <Link to="/my-stories">My Stories</Link>
