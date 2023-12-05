@@ -7,6 +7,7 @@ function NewStory({ name, useemail}) {
         e.preventDefault()
 
     }
+    const [storyLength, setStorylength] = useState(0)
     const [storyTitle, setStoryTitle] = useState('')
     const [storyDescription, setStoryDescription] = useState('')
     const [tag, setTag] = useState('')
@@ -16,13 +17,15 @@ function NewStory({ name, useemail}) {
     }
     function handleDescriptionChange(e) {
         console.log('calling desc')
-        if(e.target.value.trim().split().length>=300) {
+        setStorylength(e.target.value.trim().split(" ").length);
+        if(e.target.value.trim().split(" ").length>=300) {
+            
             return;
         }
         setStoryDescription(e.target.value)
     }
     function handleFileChange(e) {
-        setStoryTitle(e.target.value)
+        setStoryImage(e.target.value)
     }
   return (
     <div className='new-story'>
@@ -32,8 +35,9 @@ function NewStory({ name, useemail}) {
                 <input type='text' value={storyTitle} className='input-field' onChange={e => handleTitleChange(e)}/>
                 <label>Story Description</label>
                 <textarea rows={8} value={storyDescription} onChange={(e) => handleDescriptionChange(e)}/>
-                <label>One image</label>
-                <input type='file' onChange={e => handleFileChange(e)}/>
+                <span className={storyLength<=300?"word-count":"word-count-red"}>Words:{storyLength}</span>
+                <label>Image Link(Optional)</label>
+                <input className='input-field-image' type='text' onChange={e => handleFileChange(e)}/>
                 <div className="tags">
                     <label>Tags : </label>
                     <span className={tag==='Entertainment' ? 'tag active-tag' : 'tag'} onClick={() => setTag('Entertainment')}>Entertainment</span>

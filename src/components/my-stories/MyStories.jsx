@@ -4,6 +4,7 @@ import { db } from '../../firebase';
 import { onValue, ref} from "firebase/database";
 import StoryList from '../story-list/story-list'
 import './MyStories.css'
+import search from "../assets/search.png"
 
 function MyStories({ name='', userEmail='' }) {
   const [dataList, setDataList] = useState([])
@@ -31,7 +32,8 @@ useEffect(() => {
   return (
     <div className='my-stories'>
       <div className="my-stories-header">-My Stories-</div>
-      <div className="filter-search">
+      <div className="filter-search" style={{display:"flex"}}>
+      <img className="search-icon" style={{ width: 35, height: 35,padding:5}} src={search} alt="Find" />
           <input value={filterName} onChange={e => setFilterName(e.target.value)} placeholder='Search'/>
         </div>
         <StoryList dataList={dataList} filterName={filterName} userEmail={userEmail} filterEmail={true}/>

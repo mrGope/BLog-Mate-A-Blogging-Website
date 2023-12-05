@@ -3,13 +3,13 @@ import navbar_icon from "../components/assets/feather-pen.png"
 import { Link } from "react-router-dom";
 export default function Navbar({ display, name='', setIsLogOut}) {
   const display_status = display;
-  const display_status_rev=display_status=="none"?"flex":"none";
-  const display_name = name
+  //const display_status_rev=display_status=="none"?"flex":"none";
+  //const display_name = name
     return (
       <nav className="navigation">
         <img className="brand-icon" style={{width: 50, height: 50}} src={navbar_icon} alt="Logo" />
 
-        <a href="/" className="brand-name">
+        <a href="" className="brand-name">
          BlogMate
         </a>
         <div

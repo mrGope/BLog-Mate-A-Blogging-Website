@@ -42,10 +42,12 @@ a {
     margin-bottom: 12px;
 }
 .filter-search > input {
-    width: 300%;
+    width: 200px;
+    height: 35px;
     border: 1px;
     border: 2px solid #8ab4f8;
     font-size: 14px;
     border-radius: 8px;
+   
 
 }

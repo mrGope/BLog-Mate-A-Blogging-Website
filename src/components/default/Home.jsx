@@ -45,7 +45,7 @@ const Default = ({ name='', userEmail='' }) => {
         
         <div className="home-header">-Top Stories-</div>
         <div className="filter-search">
-        <img className="brand-icon" style={{width: 35, height: 35,padding:5}} src={search} alt="Find" />
+        <img className="search-icon" style={{width: 35, height: 35,padding:5}} src={search} alt="Find" />
           <input value={filterName} onChange={e => setFilterName(e.target.value)} placeholder='Search'/>
         </div>
        
