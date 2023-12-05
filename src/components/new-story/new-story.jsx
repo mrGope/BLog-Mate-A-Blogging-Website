@@ -1,10 +1,43 @@
 import React, { useState } from 'react'
 import './new-story.css'
-import { db } from "../../firebase";
-import { onValue, ref} from "firebase/database";
-function NewStory({ name, useemail}) {
-    function handleSubmit(e) {
+import { db,app } from "../../firebase";
+import { onValue, ref,set} from "firebase/database";
+
+function NewStory({ name, userEmail}) {
+
+    function handleSubmit(e)
+     {
         e.preventDefault()
+        const query = ref(db,"postdetails");
+        var postCount=0;
+        
+         onValue(query, (snapshot) => {
+          const data = snapshot.val();
+          
+          
+          if (snapshot.exists()) {
+           postCount=data.postcount;
+           console.log(data);
+          }
+          else
+          console.log("no post count");
+        });
+        postCount++;
+          set(ref(db, 'post/'+postCount), {
+            id:postCount,
+            userName: name,
+            userEmail:userEmail ,
+            storyTitle: storyTitle,
+            tag:tag,
+            storyDescription: storyDescription,
+            storyImageLink: storyImage
+          });
+        
+          set(ref(db, "postdetails"), {
+            postcount:postCount
+           
+          });
+        
 
     }
     const [storyLength, setStorylength] = useState(0)
