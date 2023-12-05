@@ -1,7 +1,7 @@
 import "../components/css/navbar.css"
 import navbar_icon from "../components/assets/feather-pen.png"
 import { Link } from "react-router-dom";
-export default function Navbar({ display, name='', setIsLogOut}) {
+export default function Navbar({ display, name, setIsLogOut}) {
   const display_status = display;
   //const display_status_rev=display_status=="none"?"flex":"none";
   //const display_name = name
@@ -23,9 +23,7 @@ export default function Navbar({ display, name='', setIsLogOut}) {
             <li>
             <Link to="/signup">Signup</Link>
             </li>
-            <li>
-                 <Link to="/login">About us</Link>
-            </li>
+            
           </ul>
           }
           {
@@ -35,14 +33,12 @@ export default function Navbar({ display, name='', setIsLogOut}) {
               <Link to="/home">{display_name}</Link>
             </li> */}
             <li>
-              <Link to='/home'>Welcome</Link>
+              <Link to='/home'>Welcome,{name}</Link>
             </li>
             <li>
                  <Link to="/my-stories">My Stories</Link>
             </li>
-            <li>
-                 <Link to="/about">About us</Link>
-            </li>
+            
             <li>
                  <Link to="/logout">Logout</Link>
             </li>

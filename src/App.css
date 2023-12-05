@@ -26,9 +26,21 @@
     align-items: center;
     cursor: pointer;
     z-index: 1;
+    transition: transform .3s; 
+
+}
+.fixed-new-blog :hover
+{
+    
+    transform: scale(1.5);
+
 }
 .fixed-new-blog > span {
     color: #ff7603;
+}
+.fixed-new-blog > span:hover{
+    color: #ff7603;
+
 }
 
 a {

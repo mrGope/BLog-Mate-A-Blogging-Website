@@ -25,8 +25,8 @@ function App() {
       if (user) {
         setUserName(user.displayName);
         setUserEmail(user.email)
-        console.log(userName, user.displayName)
-        console.log(userEmail, user.email)
+        //console.log(userName, user.displayName)
+        //console.log(userEmail, user.email)
       } else setUserName(-1);
     });
   }, []);

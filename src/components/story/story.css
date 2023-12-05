@@ -37,8 +37,10 @@
     color: #fff !important;
     background-color: #5659C9 !important;
 }
-.individual-story-image {
-    width: 100%;
+
+.individual-story-image>img {
+    width: 100% !important;
+    height: 60%;
 }
 .individual-story-description {
     font-size: 14px;
