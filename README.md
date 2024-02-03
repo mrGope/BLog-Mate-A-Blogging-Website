@@ -1,10 +1,5 @@
- BLOGMATE -**
+ BLOGMATE -
 **A REACTJS WEB APP POWERED BY GOOGLE FIREBASE.**
-
-_ **Submitted by** _
-**ADITYA KUMAR GOPE**
- **Roll no: 2247203 CHRIST UNIVERSITY MCA
- email:**[**aditya.gope@mca.christuniversity.in**](mailto:aditya.gope@mca.christuniversity.in)**Phone:9903602942**
 
 **GitHub repository link:** [**https://github.com/mrGope/BLog-Mate-A-Blogging-Website**](https://github.com/mrGope/BLog-Mate-A-Blogging-Website)
  **Hosted Website Link:** [**https://blog-mate.web.app**](https://blog-mate.web.app/)
@@ -20,7 +15,7 @@ _ **Submitted by** _
 - **Google Firebase Hosting Services**
 
 **Instruction to Run of Local System:**
-
+note: add your firebase credentials. (config data into src/firebase.js)
 Step1: Clone Git Repo
 
 Step2: Open using VS-code and open Terminal in the folder
